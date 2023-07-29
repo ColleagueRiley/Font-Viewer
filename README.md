@@ -2,14 +2,13 @@
 
 requirements:
 
-RSGL (development)
-
-RSGL-Make
+system APIs\
+c compiler
 
 how to build:
 
-```cpp
-RSGLMake
+```sh
+make
 
 ./RSGL-Font-Viewer <.ttf>
 ```
