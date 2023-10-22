@@ -26,6 +26,8 @@ int main(int args, char** argv){
       
       unsigned int font = RSGL_loadFont(argv[1]); 
 
+      RSGL_setFont(font);
+
       char* texts[] = {fontName, "abcdefghijklmnopqrstuvwxyz", "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "0123456789.:,;(*!?')"};
 
       while(running){
@@ -36,12 +38,12 @@ int main(int args, char** argv){
                   }
 
             for (i = 0; i < sizeof(texts)/sizeof(char*); i++) 
-                  RSGL_drawText(texts[i], font, 
+                  RSGL_drawText(texts[i], 
                                                 RSGL_CIRCLE(5, y + (i * 30), (i) ? 20 : 40), 
                                                 RSGL_RGB(0, 0, 0));
 
             for (i = 10; i < 40; i += 10) 
-                  RSGL_drawText("The quick brown fox jumps over the lazy dog.", font, 
+                  RSGL_drawText("The quick brown fox jumps over the lazy dog.", 
                                                       RSGL_CIRCLE(5, 140 + ((i / 10) * (30 + (i / 4))), i), 
                                                       RSGL_RGB(0, 0, 0));
             
